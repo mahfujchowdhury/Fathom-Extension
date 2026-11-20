@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Responsive viewer — Fathom</title>
+    <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <script src="responsive.js" defer></script>
+  </head>
+  <body>
+    <div class="page">
+      <h1 class="sr-only">Responsive viewer</h1>
+      <header class="topbar">
+        <div class="brand">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M3 5h13v8H3zM6 20h6M9 13v7M17 11h4v9h-4z" />
+          </svg>
+          <span>Fathom</span>
+        </div>
+
+        <button
+          type="button"
+          class="btn icon-btn"
+          id="sidebar-toggle"
+          aria-expanded="true"
+          aria-controls="sidebar"
+          title="Show or hide the width list"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M3 5h18v14H3zM9 5v14" />
+          </svg>
+          <span class="sr-only">Show or hide the width list</span>
+        </button>
+
+        <div class="url-block">
+          <form class="url-form" id="url-form" novalidate>
+            <label class="sr-only" for="url-input">Page URL</label>
+            <input
+              id="url-input"
+              name="url"
+              type="text"
+              inputmode="url"
+              autocomplete="url"
+              spellcheck="false"
+              placeholder="https://example.com"
+              aria-describedby="url-error"
+            />
+            <button class="btn btn-primary" type="submit" id="load">Load</button>
+          </form>
+          <p class="url-error" id="url-error" role="alert" hidden></p>
+        </div>
+
+        <button class="btn" type="button" id="reload-all">Reload all</button>
+
+        <div class="zoom" role="group" aria-label="Zoom">
+          <button class="btn" type="button" id="fit-toggle" aria-pressed="true">Fit</button>
+          <label class="sr-only" for="zoom">Zoom</label>
+          <input type="range" id="zoom" min="20" max="100" step="1" value="100" />
+          <output id="zoom-output" for="zoom">Fit</output>
+        </div>
+
+        <a
+          class="btn open-link"
+          id="open-link"
+          href="about:blank"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-disabled="true"
+          tabindex="-1"
+        >
+          Open in new tab
+        </a>
+
+        <p class="status" id="status" role="status" aria-live="polite"></p>
+      </header>
+
+      <div class="body">
+        <aside class="sidebar" id="sidebar" aria-label="Device widths">
+          <h2 class="section-title">Device widths</h2>
+          <div id="preset-groups"></div>
+          <p class="sidebar-note" id="device-count">3 of 6 widths shown</p>
+          <button class="btn" type="button" id="clear-devices">Clear</button>
+          <p class="hint sidebar-hint">
+            Widths are CSS pixels. Every preview is a real iframe laid out at that width, then
+            scaled to fit the stage.
+          </p>
+        </aside>
+
+        <div class="viewer">
+          <main class="stage" id="stage" tabindex="0" aria-label="Device previews">
+            <div class="empty-state" id="empty-state" hidden>
+              <strong>No widths selected</strong>
+              Pick a device width in the sidebar to compare this page side by side.
+            </div>
+          </main>
+          <p class="hint stage-hint">
+            Some sites refuse to be framed. If a panel stays blank, the site blocks embedding.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

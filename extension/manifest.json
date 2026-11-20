@@ -1,0 +1,57 @@
+{
+  "manifest_version": 3,
+  "name": "Fathom",
+  "short_name": "Fathom",
+  "version": "0.1.0",
+  "description": "Peel apart any website: inspect elements, export code, read its design system, capture screenshots, and compare responsive layouts.",
+  "author": "Fathom",
+  "minimum_chrome_version": "120",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtV9VQVUPwAbYofhlKRzQ08gD/eV+DwQmC8KE2IgE/LZ2DdITEr2I31cHM82/NMa/dEkV9e9diG6z0hzJsw7ysNoOD52EMpDfIg5WNXOj+q24/1fKoq6zWqp1Fl/8C8oSTJjZ8mQl23LFtQvpx3McfmWAOGHZ+tcaKpOllVpUdWYt7FsWvsRFgEKCgCG715Ps8WPirGqniN6wpQmbXBCZfWlNw/D/31qYzgnWwsI3f/mKYTIp12aqEvd9Zuk/ewJqTZwlM+cR0/tme+2yF1s5wZ7x3LRbVWNT+zKsEuuj1kqwtdLRbykJlnNvVgvXN1U1i3EOhnNacR2uk8gYc40nBwIDAQAB",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "Fathom — open website tools",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background/service-worker.js"
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y",
+        "mac": "Command+Shift+Y"
+      }
+    }
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "downloads",
+    "clipboardWrite",
+    "webNavigation",
+    "contextMenus",
+    "declarativeNetRequestWithHostAccess"
+  ],
+  "host_permissions": ["<all_urls>"],
+  "options_ui": {
+    "page": "ui/dashboard.html",
+    "open_in_tab": true
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["ui/workspace.css", "icons/logo.svg"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

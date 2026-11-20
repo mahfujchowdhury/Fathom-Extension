@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pin Fathom to your toolbar</title>
+    <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="pin.css" />
+    <script src="pin.js" defer></script>
+  </head>
+  <body class="pin-body">
+    <main class="onboarding" aria-labelledby="pin-title">
+      <header class="onboarding-head">
+        <span class="brand">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 3l12 7-5.2 1.6L10.4 17z" />
+          </svg>
+          Fathom
+        </span>
+        <span class="installed">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 12.5l5 5L20 6.5" />
+          </svg>
+          Extension installed
+        </span>
+      </header>
+
+      <section class="card">
+        <p class="eyebrow">One quick thing</p>
+        <h1 id="pin-title" tabindex="-1">Pin Fathom to your toolbar</h1>
+        <p class="lede">
+          Fathom is installed. Pin it and every page you visit gets its tool dock one click away —
+          no menus, no hunting.
+        </p>
+
+        <ol class="steps">
+          <li class="step">
+            <span class="step-num" aria-hidden="true">1</span>
+            <div class="step-text">
+              <strong>Open the extensions menu</strong>
+              <p>Click the puzzle-piece icon at the top-right of Chrome, next to the address bar.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-num" aria-hidden="true">2</span>
+            <div class="step-text">
+              <strong>Find Fathom</strong>
+              <p>It is in the list of installed extensions, sitting beside the other ones you have.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-num" aria-hidden="true">3</span>
+            <div class="step-text">
+              <strong>Pin it</strong>
+              <p>Click the pin beside Fathom. The icon stays on your toolbar until you unpin it.</p>
+            </div>
+          </li>
+        </ol>
+
+        <figure class="demo">
+          <svg
+            class="demo-art"
+            viewBox="0 0 720 250"
+            role="img"
+            aria-labelledby="demo-art-title demo-art-desc"
+            font-family="system-ui, -apple-system, 'Segoe UI', sans-serif"
+          >
+            <title id="demo-art-title">Chrome's extensions menu open below the toolbar, with the pin beside Fathom highlighted</title>
+            <desc id="demo-art-desc">
+              A browser window with a puzzle-piece icon in the toolbar. The extensions menu is open,
+              listing Fathom with a pin button, and a dashed arrow shows the pin putting Fathom back on
+              the toolbar.
+            </desc>
+
+            <!-- window -->
+            <rect x="16" y="12" width="688" height="226" rx="14" fill="#100e13" />
+            <rect x="16" y="12" width="688" height="46" rx="14" fill="#141217" />
+            <rect x="16" y="44" width="688" height="14" fill="#141217" />
+            <line x1="16" y1="58" x2="704" y2="58" stroke="#47404f" stroke-width="1" />
+
+            <!-- traffic lights + address bar -->
+            <circle cx="40" cy="35" r="4.5" fill="#e2919c" />
+            <circle cx="58" cy="35" r="4.5" fill="#dfc58b" />
+            <circle cx="76" cy="35" r="4.5" fill="#91c6ac" />
+            <rect x="98" y="26" width="300" height="18" rx="9" fill="#1c1822" stroke="#47404f" />
+            <text x="110" y="38.5" fill="#c5bfce" font-size="9.5">example.com</text>
+
+            <!-- extensions button -->
+            <rect x="600" y="22" width="30" height="27" rx="8" fill="#2b2037" stroke="#c29aef" />
+            <g transform="translate(605.5 25) scale(0.79)">
+              <path d="M4 9h4a3 3 0 0 1 6 0h4v4a3 3 0 0 1 0 6H4V9z" fill="none" stroke="#c29aef" stroke-width="1.7" stroke-linejoin="round" />
+            </g>
+
+            <!-- page hints behind the menu -->
+            <g opacity="0.5">
+              <rect x="40" y="82" width="330" height="12" rx="6" fill="#241f2b" />
+              <rect x="40" y="108" width="380" height="8" rx="4" fill="#1d1923" />
+              <rect x="40" y="126" width="300" height="8" rx="4" fill="#1d1923" />
+              <rect x="40" y="160" width="150" height="64" rx="8" fill="#1a1620" stroke="#2c2634" />
+              <rect x="204" y="160" width="150" height="64" rx="8" fill="#1a1620" stroke="#2c2634" />
+            </g>
+
+            <!-- menu shadow + menu -->
+            <ellipse cx="600" cy="150" rx="170" ry="86" fill="#c29aef" opacity="0.05" />
+            <rect x="442" y="70" width="246" height="146" rx="12" fill="#000" opacity="0.35" />
+            <rect x="440" y="66" width="246" height="146" rx="12" fill="#17151a" stroke="#514657" />
+
+            <text x="456" y="88" fill="#c5bfce" font-size="9" letter-spacing="1.6">EXTENSIONS</text>
+            <line x1="452" y1="98" x2="674" y2="98" stroke="#2c2634" />
+
+            <!-- row 1: Fathom -->
+            <rect x="452" y="108" width="24" height="24" rx="7" fill="#2b2037" stroke="#c29aef" />
+            <g transform="translate(457 113) scale(0.58)">
+              <path d="M4 9h4a3 3 0 0 1 6 0h4v4a3 3 0 0 1 0 6H4V9z" fill="none" stroke="#c29aef" stroke-width="2" stroke-linejoin="round" />
+            </g>
+            <text x="486" y="124" fill="#fff" font-size="12" font-weight="600">Fathom</text>
+
+            <!-- pin button, highlighted -->
+            <circle cx="656" cy="120" r="13" fill="#2b2037" stroke="#c29aef" />
+            <g transform="translate(648.5 112.5) scale(0.62)">
+              <path d="M16 9V4h1c.55 0 1-.45 1-1c0-.55-.45-1-1-1H7c-.55 0-1 .45-1 1c0 .55 .45 1 1 1h1v5c0 1.66-1.34 3-3 3v2h5.97v7l1 1 1-1v-7H19v-2c-1.66 0-3-1.34-3-3z" fill="#e6d6f7" />
+            </g>
+
+            <!-- row 2: other extension -->
+            <rect x="452" y="144" width="24" height="24" rx="7" fill="#1c1822" stroke="#47404f" />
+            <g opacity="0.45" transform="translate(457 149) scale(0.58)">
+              <path d="M4 9h4a3 3 0 0 1 6 0h4v4a3 3 0 0 1 0 6H4V9z" fill="none" stroke="#8d8499" stroke-width="2" stroke-linejoin="round" />
+            </g>
+            <text x="486" y="160" fill="#c5bfce" font-size="11.5" opacity="0.5">Other extension</text>
+
+            <!-- menu footer -->
+            <line x1="452" y1="180" x2="674" y2="180" stroke="#2c2634" />
+            <text x="456" y="198" fill="#8d8499" font-size="9.5">Pin it once — Fathom stays put.</text>
+
+            <!-- pin-to-toolbar arrow -->
+            <path d="M667 109 C 692 103, 693 86, 693 62 L693 36 L642 36" fill="none" stroke="#c29aef" stroke-width="1.4" stroke-dasharray="4 4" opacity="0.85" />
+            <path d="M634 36l9-4.5v9z" fill="#c29aef" />
+
+            <!-- cursor -->
+            <path d="M665 129l0 13.5 3.6-3.6 2.7 5.8 3.4-1.6-2.7-5.6 5-0.7z" fill="#f4f1f8" stroke="#0c0b0e" stroke-width="0.9" stroke-linejoin="round" />
+
+            <!-- window outline, drawn last so nothing clips it -->
+            <rect x="16" y="12" width="688" height="226" rx="14" fill="none" stroke="#47404f" />
+          </svg>
+          <figcaption>Pin Fathom from the extensions menu.</figcaption>
+        </figure>
+
+        <p class="shortcut-note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 6h18v12H3zM6 10h2M10 10h2M14 10h2M17 10h1M6 14h1M9 14h2M13 14h2" />
+          </svg>
+          <span>
+            <strong>Shortcut:</strong> <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Y</kbd>
+            (<kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>Y</kbd> on a Mac) opens the dock even when the
+            icon is not pinned.
+          </span>
+        </p>
+
+        <div class="actions">
+          <button class="btn btn-primary" type="button" id="try-it">Open a page and try it</button>
+          <a class="btn" href="dashboard.html" id="open-settings">Settings</a>
+        </div>
+        <p class="status" id="status" role="status" aria-live="polite"></p>
+      </section>
+
+      <footer class="onboarding-foot">
+        <span id="pin-version">Fathom</span>
+        <span>Made for a closer look.</span>
+      </footer>
+    </main>
+  </body>
+</html>
